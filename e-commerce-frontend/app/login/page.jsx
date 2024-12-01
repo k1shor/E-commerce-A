@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 const page = () => {
@@ -15,8 +16,16 @@ const page = () => {
                 <button className='bg-black py-3 rounded-md w-full text-white text-xl'>Login</button>
 
                 <div className='flex justify-between'>
-                    <span className='font-semibold'>Do not have an account?Sign up</span>
-                    <h3 className='font-semibold'>Forgot password</h3>
+                    <span className='font-semibold'>Do not have an account?
+                        <Link href={'/register'}>
+                            Sign up
+                        </Link>
+                    </span>
+                    <h3 className='font-semibold'>
+                        <Link href={'/foretpassword'}>
+                            Forgot password
+                        </Link>
+                    </h3>
                 </div>
             </form>
 
