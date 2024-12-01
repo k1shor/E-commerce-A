@@ -2,7 +2,7 @@ const User = require('../models/userModel')
 const Token = require('../models/tokenModel')
 const bcrypt = require('bcrypt')
 const crypto = require('crypto')
-const emailSender = require('../utils/emailSender')
+const emailSender = require('../middleware/emailSender')
 const jwt = require('jsonwebtoken')
 const{expressjwt} = require('express-jwt')
 
@@ -11,6 +11,8 @@ const{expressjwt} = require('express-jwt')
 const saltRounds = 10
 //register
 exports.register = async(req,res)=>{
+    return res.send({error:"ERROR TEST"})
+    console.log(req.body)
     //take input from users(id pass)
     const {username,email,password}= req.body    //yo gryo vane each time req.body grirakhna prdina
 
@@ -44,17 +46,18 @@ exports.register = async(req,res)=>{
     })
 
     if(!token){
-        return(res.status(400).json({error: "Something went wrong"}))
+        return res.status(400).json({error: "Something went wrong"})
     }
     //send token  in email
     const URL = `http://localhost:5000/verifyuser/${token.token}`
-    emailSender({
-        from:"noreply@something.com",
-        to: email,
-        subject: "Verification Email",
-        text: `Click on the given link or copy paste in browser to verify  ${URL}`,
-        html: `<a href = '${URL}'><button> Verify Now</button></a>`
-    })
+    // emailSender({
+    //     from:"noreply@something.com",
+    //     to: email,
+    //     subject: "Verification Email",
+    //     text: `Click on the given link or copy paste in browser to verify  ${URL}`,
+    //     html: `<a href = '${URL}'><button> Verify Now</button></a>`
+    // })
+    console.log(user)
     //send message to user
     res.send({user, message: "user registered sucessffully"})
 }

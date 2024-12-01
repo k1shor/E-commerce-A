@@ -1,5 +1,6 @@
+const { register, verifyEmail, resendVerification, resetPassword, forgetPassword, signin } = require('../controller/userController')
+
 const router = require('express').Router()
-const { register, verifyEmail, resendVerification, resetPassword, forgetPassword, signin } = require('../controllers/userController')
 
 router.post('/register',  register)
 router.get('/verifyUser /:token', verifyEmail)
