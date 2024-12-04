@@ -5,7 +5,7 @@ router.post('/register',  register)
 router.get('/verifyUser /:token', verifyEmail)
 router.post('/resendverification', resendVerification)
 router.post('/resetpassword/:token', resetPassword)
-router.post('forgetpassword/:token', forgetPassword)
+router.post('/forgetpassword/:token', forgetPassword)
 router.post('/login', signin)
 
 module.exports = router

@@ -24,7 +24,7 @@ const storage = multer.diskStorage({
   
   const upload = multer({
      storage: storage,
-    limits: 2000000 //upto 2mb smmauplpad grna paiyo
+    limits: 2000000 //upto 2mb smma uplpad grna paiyo
     
     })
 
