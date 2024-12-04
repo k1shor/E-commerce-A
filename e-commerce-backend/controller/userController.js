@@ -11,7 +11,6 @@ const{expressjwt} = require('express-jwt')
 const saltRounds = 10
 //register
 exports.register = async(req,res)=>{
-    return res.send({error:"ERROR TEST"})
     console.log(req.body)
     //take input from users(id pass)
     const {username,email,password}= req.body    //yo gryo vane each time req.body grirakhna prdina
