@@ -7,6 +7,10 @@ const userSchema = new mongoose.Schema({
         trim: true
 
     },
+    email:{
+        type: String,
+        required: true
+    },
     password: {
         type: String,
         required: true,
@@ -19,13 +23,9 @@ const userSchema = new mongoose.Schema({
     },
     dob: {
         type: Date,
-        required: true,
+        // required: true,
     },
 
-    address: {
-        type: String,
-        trim: true,
-    },
     city: {
         type: String,
         enum: ['Kathmandu', 'Lalitpur', 'Pokhara', 'Bhaktapur', 'Biratnagar'],
@@ -33,15 +33,7 @@ const userSchema = new mongoose.Schema({
     },
     image: {
         type: String,
-        default: "default-profile.png",
     },
-
-    password: {
-        type: String,
-        required: true,
-        trim: true
-    },
-
     role: {
         type: Number,
         default: 0
