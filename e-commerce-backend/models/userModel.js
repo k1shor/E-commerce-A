@@ -18,10 +18,33 @@ type: String,
 required: true,
 trim: true
 },
+  confirmPassword: {
+      type: String,
+      required: true,
+      trim: true,
+    },
+    dob: {
+        type: Date,
+        required: true,
+    },
+    
+    address: {
+      type: String,
+      trim: true, 
+    },
+    city: {
+      type: String,
+      enum: ['Kathmandu', 'Lalitpur', 'Pokhara', 'Bhaktapur', 'Biratnagar'], 
+      required: true, 
+    },
+    image: {
+      type: String, 
+      default: "default-profile.png", 
+    },
 
 role: {
         type: Number,
-        default: 0 // 0-normal user, 1- admin ko lagi use,....
+        default: 0 
     
     },
 isVerified: {
@@ -30,7 +53,6 @@ isVerified: {
 }
 },{timestamps: true})
 
-// createAt, updateAT
-//  _id: default by mongodb= 24bit hex hcaracters (type:objectID)
+
 
 module.exports = mongoose.model('User', userSchema)

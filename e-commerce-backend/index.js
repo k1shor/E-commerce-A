@@ -13,4 +13,4 @@ app.use(express.json())
 
 app.use(UserRoute)
 
-app.listen(port,  ()=>console.log("APP STARTED SUCCESSFULLY"))
+app.listen(port, ()=>console.log("APP STARTED SUCCESSFULLY"))

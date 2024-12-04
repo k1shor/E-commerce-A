@@ -19,7 +19,7 @@ const page = () => {
       <input type="date" id='dob' className='w-full px-4 outline-gray-500 border-2 rounded-md mb-3' />
 
 
-      <label htmlFor="email" className='text-l'>Address</label>
+      <label htmlFor="address" className='text-l'>Address</label>
       <select id="add" className='w-full px-4 outline-gray-500 border-2 rounded-md mb-3' defaultValue="">
         <option value="" disabled>Select your city</option>
         <option value="Ktm">Kathmandu</option>
