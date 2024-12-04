@@ -2,7 +2,7 @@ const User = require('../models/userModel')
 const Token = require('../models/tokenModel')
 const bcrypt = require('bcrypt')
 const crypto = require('crypto')
-const emailSender = require('../utils/emailSender')
+const emailSender = require('../middleware/emailSender')
 const jwt = require('jsonwebtoken')
 const{expressjwt} = require('express-jwt')
 
@@ -50,7 +50,7 @@ exports.register = async(req,res)=>{
     })
 
     if(!token){
-        return(res.status(400).json({error: "Something went wrong"}))
+        return res.status(400).json({error: "Something went wrong"})
     }
    
     const URL = `http://localhost:5000/verifyuser/${token.token}`

@@ -5,53 +5,53 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true,
         trim: true
-    
-},
-email:{
-    type: String,
-    required: true,
-    trim: true
 
-},
-password:{
-type: String,
-required: true,
-trim: true
-},
-  confirmPassword: {
-      type: String,
-      required: true,
-      trim: true,
+    },
+    password: {
+        type: String,
+        required: true,
+        trim: true
+    },
+    confirmPassword: {
+        type: String,
+        required: true,
+        trim: true,
     },
     dob: {
         type: Date,
         required: true,
     },
-    
+
     address: {
-      type: String,
-      trim: true, 
+        type: String,
+        trim: true,
     },
     city: {
-      type: String,
-      enum: ['Kathmandu', 'Lalitpur', 'Pokhara', 'Bhaktapur', 'Biratnagar'], 
-      required: true, 
+        type: String,
+        enum: ['Kathmandu', 'Lalitpur', 'Pokhara', 'Bhaktapur', 'Biratnagar'],
+        required: true,
     },
     image: {
-      type: String, 
-      default: "default-profile.png", 
+        type: String,
+        default: "default-profile.png",
     },
 
-role: {
-        type: Number,
-        default: 0 
-    
+    password: {
+        type: String,
+        required: true,
+        trim: true
     },
-isVerified: {
-    type: Boolean,
-    default: false
-}
-},{timestamps: true})
+
+    role: {
+        type: Number,
+        default: 0
+
+    },
+    isVerified: {
+        type: Boolean,
+        default: false
+    }
+}, { timestamps: true })
 
 
 
