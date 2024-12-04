@@ -7,12 +7,35 @@ const userSchema = new mongoose.Schema({
         trim: true
 
     },
-    email: {
+    password: {
         type: String,
         required: true,
         trim: true
-
     },
+    confirmPassword: {
+        type: String,
+        required: true,
+        trim: true,
+    },
+    dob: {
+        type: Date,
+        required: true,
+    },
+
+    address: {
+        type: String,
+        trim: true,
+    },
+    city: {
+        type: String,
+        enum: ['Kathmandu', 'Lalitpur', 'Pokhara', 'Bhaktapur', 'Biratnagar'],
+        required: true,
+    },
+    image: {
+        type: String,
+        default: "default-profile.png",
+    },
+
     password: {
         type: String,
         required: true,
@@ -21,7 +44,7 @@ const userSchema = new mongoose.Schema({
 
     role: {
         type: Number,
-        default: 0 // 0-normal user, 1- admin ko lagi use,....
+        default: 0
 
     },
     isVerified: {
@@ -29,6 +52,7 @@ const userSchema = new mongoose.Schema({
         default: false
     }
 }, { timestamps: true })
+
 
 
 module.exports = mongoose.model('User', userSchema)

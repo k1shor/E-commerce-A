@@ -18,4 +18,6 @@ app.use(cors())
 
 app.use(UserRoute)
 
-app.listen(port, () => console.log("APP STARTED SUCCESSFULLY"))
+
+app.listen(port, ()=>console.log("APP STARTED SUCCESSFULLY"))
+

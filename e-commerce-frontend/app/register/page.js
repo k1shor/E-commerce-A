@@ -39,15 +39,15 @@ const page = () => {
           <input type="date" id='dob' className='w-full px-4 outline-gray-500 border-2 rounded-md mb-3' />
 
 
-          <label htmlFor="email" className='text-l'>Address</label>
-          <select id="add" className='w-full px-4 outline-gray-500 border-2 rounded-md mb-3' defaultValue="">
-            <option value="" disabled>Select your city</option>
-            <option value="Ktm">Kathmandu</option>
-            <option value="lal">Lalitpur</option>
-            <option value="pkr">Pokhara</option>
-            <option value="bkt">Bhaktapur</option>
-            <option value="btn">Biratnagar</option>
-          </select>
+      <label htmlFor="add" className='text-l'>Address</label>
+      <select id="add" className='w-full px-4 outline-gray-500 border-2 rounded-md mb-3' defaultValue="">
+        <option value="" disabled>Select your city</option>
+        <option value="Ktm">Kathmandu</option>
+        <option value="lal">Lalitpur</option>
+        <option value="pkr">Pokhara</option>
+        <option value="bkt">Bhaktapur</option>
+        <option value="btn">Biratnagar</option>
+      </select>
 
           <label htmlFor="pwd" className='text-l'>Password</label>
           <input type="password" id='pwd' className='w-full px-4 outline-gray-500 border-2 rounded-md mb-3' name='password' onChange={handleChange}></input>
