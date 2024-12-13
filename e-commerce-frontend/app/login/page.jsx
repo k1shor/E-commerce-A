@@ -22,7 +22,7 @@ const page = () => {
                         </Link>
                     </span>
                     <h3 className='font-semibold'>
-                        <Link href={'/foretpassword'}>
+                        <Link href={'/forgetpassword'}>
                             Forgot password
                         </Link>
                     </h3>
