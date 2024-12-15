@@ -5,9 +5,9 @@ export const register = (user) => {
     return fetch(`${URL}/register`, {
         method: "POST",
         headers: {
-            "Content-Type": "application/json",
+            // "Content-Type": "application/json",
         },
-        body: JSON.stringify(user)
+        body: (user)
     })
         .then(res => res.json())
         .catch(error => console.log(error))

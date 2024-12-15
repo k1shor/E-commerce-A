@@ -9,16 +9,6 @@ const storage = multer.diskStorage({
     if (!fs.existsSync(file_destination)) {
       fs.mkdirSync(file_destination, { recursive: true })
     }
-<<<<<<< HEAD
-  })
-  
-  const upload = multer({
-     storage: storage,
-    limits: 2000000 //upto 2mb smma uplpad grna paiyo
-    
-    })
-=======
->>>>>>> 0539f413c56264fbac5019bead46b910d8d0ca87
 
     cb(null, file_destination)
   },
