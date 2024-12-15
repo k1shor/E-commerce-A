@@ -44,9 +44,12 @@ const page = () => {
 
 
           <label htmlFor="add" className='text-l'>Address</label>
-          <select id="add" className='w-full px-4 outline-gray-500 border-2 rounded-md mb-3' defaultValue="">
-            <option value="" disabled>Select your city</option>
-          </select>
+          <input id="add" className='w-full px-4 outline-gray-500 border-2 rounded-md mb-3' defaultValue="">
+          </input>
+
+          <label htmlFor="img" className='text-l'>Upload Image</label>
+          <input type="file" id="img" className='w-full px-4 outline-gray-500 border-2 rounded-md mb-3' defaultValue="">
+          </input>
 
           <label htmlFor="pwd" className='text-l'>Password</label>
           <input type="password" id='pwd' className='w-full px-4 outline-gray-500 border-2 rounded-md mb-3' name='password' onChange={handleChange}></input>

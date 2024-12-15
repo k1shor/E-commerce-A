@@ -28,7 +28,6 @@ const userSchema = new mongoose.Schema({
 
     city: {
         type: String,
-        enum: ['Kathmandu', 'Lalitpur', 'Pokhara', 'Bhaktapur', 'Biratnagar'],
         required: true,
     },
     image: {
