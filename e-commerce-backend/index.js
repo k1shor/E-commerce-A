@@ -2,6 +2,8 @@ const express = require('express')
 require('dotenv').config()
 require('./database/connection')
 
+const morgan = require('morgan')
+
 const cors = require('cors')
 
 const UserRoute = require('./routes/userRoutes')
@@ -13,6 +15,7 @@ const port = process.env.PORT
 
 app.use(express.json())
 app.use(cors())
+app.use(morgan('dev'))
 
 
 

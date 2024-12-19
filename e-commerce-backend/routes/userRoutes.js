@@ -3,10 +3,10 @@ const { register, verifyEmail, resendVerification, resetPassword, forgetPassword
 const upload = require('../middleware/fileUpload')
 
 router.post('/register',upload.single('user-image'),  register)
-router.get('/verifyUser /:token', verifyEmail)
+router.get('/verifyUser/:token', verifyEmail)
 router.post('/resendverification', resendVerification)
+router.post('/forgetpassword', forgetPassword)
 router.post('/resetpassword/:token', resetPassword)
-router.post('/forgetpassword/:token', forgetPassword)
 router.post('/login', signin)
 
 module.exports = router

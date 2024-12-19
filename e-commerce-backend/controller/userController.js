@@ -13,15 +13,15 @@ const saltRounds = 10
 
 exports.register = async (req, res) => {
 
-    const { username, email, password, confirmPassword, phone, dob, city } = req.body
+    const { username, email, password, cpassword, phone, dob, city } = req.body
 
-    if (password != confirmPassword) {
+    if (password != cpassword) {
         return res.status(400).json({ error: "Password and confirm password do not match" })
     }
 
     let usernameExists = await User.findOne({ username })
     if (usernameExists) {
-        return res.status(400).json({ error: "Username not available, please choose another" })
+        return res.status(400).json({ error: "Username not  available, please choose another" })
     }
 
     let emailExists = await User.findOne({ email })
@@ -41,7 +41,7 @@ exports.register = async (req, res) => {
         dob,
         image,
         password: hashed_password,
-        confirmPassword,
+        confirmPassword:cpassword,
         city,
         phone
     })
@@ -80,7 +80,7 @@ exports.verifyEmail = async (req, res) => {
 
     let user = await User.findById(token.user)
     if (!user) {
-        return res.status(400).json({ error: "Somethin went wrong" })
+        return res.status(400).json({ error: "Something went wrong" })
     }
 
 

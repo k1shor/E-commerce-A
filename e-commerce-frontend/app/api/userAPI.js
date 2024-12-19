@@ -12,3 +12,9 @@ export const register = (user) => {
         .then(res => res.json())
         .catch(error => console.log(error))
 }
+
+export const verifyEmail = (token) => {
+    return fetch(`${URL}/verifyUser/${token}`)
+        .then(res => res.json())
+        .catch(error => console.log(error))
+}
